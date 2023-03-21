@@ -3,6 +3,8 @@ import React, { useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { Navigate } from 'react-router-dom'
 import { getUserProfile, login } from '../../Features/userSlices'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faCircleUser } from '@fortawesome/free-solid-svg-icons'
 import './signin.css'
 
 function Login() {
@@ -32,9 +34,12 @@ function Login() {
   return (
     <>
       <Nav />
-      <main className="main bg-dark">
+      <main className="main">
         <section className="sign-in-content">
-          <i className="fa fa-user-circle sign-in-icon"></i>
+          <span className="log-in-icon">
+            <FontAwesomeIcon icon={faCircleUser} />
+          </span>
+
           <h1>Sign In</h1>
           <form onSubmit={(e) => handleSubmit(e)}>
             <div className="input-wrapper">

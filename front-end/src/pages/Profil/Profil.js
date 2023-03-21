@@ -4,6 +4,8 @@ import React, { useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import './profil.css'
 import { updateUserProfile } from '../../Features/userSlices'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faTimesCircle } from '@fortawesome/free-solid-svg-icons'
 
 function User() {
   const { user } = useSelector((state) => state.user)
@@ -34,7 +36,7 @@ function User() {
         <div className="modal-change-info" data-modal-open={isShowing}>
           <div className="inner-modal">
             <button className="close-modal" onClick={() => setIsShowing(false)}>
-              <i className="fa fa-times-circle fa-lg"></i>
+              <FontAwesomeIcon icon={faTimesCircle} />
             </button>
             <h4>Update your information</h4>
             <form onSubmit={(e) => handleSubmit(e)}>

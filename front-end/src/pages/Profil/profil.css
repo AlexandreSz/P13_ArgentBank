@@ -112,10 +112,7 @@
 	padding: 0;
   }
   
-  .close-modal i {
-	margin-left: auto;
-	color: #db3d3d;
-  }
+
   
   form {
 	display: flex;

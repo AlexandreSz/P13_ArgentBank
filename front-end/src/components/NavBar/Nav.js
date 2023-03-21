@@ -3,6 +3,9 @@ import Logo from '../../assets/images/argentBankLogo.png'
 import { Link, Navigate } from 'react-router-dom'
 import { useDispatch, useSelector } from 'react-redux'
 import { logout } from '../../Features/userSlices'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faCircleUser } from '@fortawesome/free-solid-svg-icons'
+import { faSignOut } from '@fortawesome/free-solid-svg-icons'
 
 const Nav = () => {
   const { user } = useSelector((state) => state.user)
@@ -23,17 +26,19 @@ const Nav = () => {
           user.userProfile ? (
             <div className="login-block">
               <div className="login-user">
-                <i className="fa fa-user-circle"></i>
+                <span className="sign-in-icon">
+                  <FontAwesomeIcon icon={faCircleUser} />
+                </span>
                 {user.userProfile.firstName}
               </div>
               <div className="login-logout">
-                <i className="fa-solid fa-arrow-right-from-bracket"></i>
                 <button
                   onClick={() => {
                     dispatch(logout())
                     ;<Navigate to="/" replace />
                   }}
                 >
+                  <FontAwesomeIcon icon={faSignOut} />
                   Logout
                 </button>
               </div>
@@ -41,7 +46,9 @@ const Nav = () => {
           ) : (
             <div>
               <Link to="/login" className="main-nav-item">
-                <i className="fa fa-user-circle"></i>
+                <span className="sign-in-icon">
+                  <FontAwesomeIcon icon={faCircleUser} />
+                </span>
                 Sign In
               </Link>
             </div>
@@ -49,7 +56,9 @@ const Nav = () => {
         ) : (
           <div>
             <Link to="/login" className="main-nav-item">
-              <i className="fa fa-user-circle"></i>
+              <span className="sign-in-icon">
+                <FontAwesomeIcon icon={faCircleUser} />
+              </span>
               Sign In
             </Link>
           </div>

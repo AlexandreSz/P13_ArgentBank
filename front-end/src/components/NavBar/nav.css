@@ -54,3 +54,7 @@
 	cursor: pointer;
 	font-family: Avenir, Helvetica, Arial, sans-serif;
   }
+
+  .sign-in-icon{
+	font-size: 1rem !important;
+  }

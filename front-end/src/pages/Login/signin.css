@@ -1,3 +1,7 @@
+.main{
+	background-color: #2c3e50;
+	height: 75vh;
+}
 .sign-in-button {
 	display: block;
 	width: 100%;
@@ -19,7 +23,7 @@
 	padding: 2rem;
   }
   
-  .sign-in-icon {
+  .log-in-icon {
 	font-size: 5rem;
   }
   
